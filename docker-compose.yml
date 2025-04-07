@@ -7,10 +7,10 @@ services:
       args:
         TARGETPLATFORM: ${TARGETPLATFORM:-linux/amd64}
     ports:
-      - "7788:7788"  # Gradio default port
-      - "6080:6080"  # noVNC web interface
-      - "5901:5901"  # VNC port
-      - "9222:9222"  # Chrome remote debugging port
+      - "127.0.0.1:7788:7788"  # Gradio default port
+      - "127.0.0.1:6080:6080"  # noVNC web interface
+      - "127.0.0.1:5901:5901"  # VNC port
+      - "127.0.0.1:9222:9222"  # Chrome remote debugging port
     environment:
       - OPENAI_ENDPOINT=${OPENAI_ENDPOINT:-https://api.openai.com/v1}
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
